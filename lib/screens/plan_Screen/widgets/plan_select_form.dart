@@ -33,7 +33,7 @@ class _PlanSelectFormState extends State<PlanSelectForm> {
                     Icon(
                       Icons.list,
                       size: 16,
-                      color: Colors.yellow,
+                      color: Colors.white,
                     ),
                     SizedBox(
                       width: 4,
@@ -44,7 +44,7 @@ class _PlanSelectFormState extends State<PlanSelectForm> {
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
-                          color: Colors.yellow,
+                          color: Colors.white,
                         ),
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -75,7 +75,7 @@ class _PlanSelectFormState extends State<PlanSelectForm> {
                   Icons.arrow_forward_ios_outlined,
                 ),
                 iconSize: 14,
-                iconEnabledColor: Colors.yellow,
+                iconEnabledColor: Colors.white,
                 iconDisabledColor: Colors.grey,
                 buttonHeight: 50,
                 buttonWidth: 160,
@@ -85,7 +85,7 @@ class _PlanSelectFormState extends State<PlanSelectForm> {
                   border: Border.all(
                     color: Colors.black26,
                   ),
-                  color: Colors.redAccent,
+                  color: Colors.grey,
                 ),
                 buttonElevation: 2,
                 itemHeight: 40,
@@ -95,7 +95,7 @@ class _PlanSelectFormState extends State<PlanSelectForm> {
                 dropdownPadding: null,
                 dropdownDecoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(14),
-                  color: Colors.redAccent,
+                  color: Colors.grey,
                 ),
                 dropdownElevation: 8,
                 scrollbarRadius: const Radius.circular(40),
