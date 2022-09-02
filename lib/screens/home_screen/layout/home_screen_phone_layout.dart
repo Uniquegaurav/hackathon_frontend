@@ -55,7 +55,7 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsetsDirectional.only(start: 10,top: 10,end: 10,bottom: 5),
           child: Center(
               child: Column(
                 children: [
@@ -75,7 +75,7 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
                     ),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   GridViewWidget(),
                 ],
