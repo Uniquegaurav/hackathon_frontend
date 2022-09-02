@@ -23,7 +23,6 @@ class AppThemeData {
       _successColorDark;
   final Color _padding1;
   final Color _shadow1;
-
   //TODO: Replace with proper default values
   AppThemeData._withDefaultValues()
       : _primaryColor = const Color(0xFF0025B9),

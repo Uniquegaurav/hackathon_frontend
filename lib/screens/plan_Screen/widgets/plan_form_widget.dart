@@ -41,11 +41,12 @@ class PlanFormWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.blueAccent)
                       ),
+                    padding: const EdgeInsetsDirectional.all(5),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(top: 20),
+                          margin: const EdgeInsets.only(top: 20,),
                           child: Row(
                             children: [
                               const Expanded(
@@ -58,7 +59,7 @@ class PlanFormWidget extends StatelessWidget {
                                       contentPadding:
                                       const EdgeInsets.fromLTRB(15, 8, 8, 0),
                                       border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(23.0)),
+                                          borderRadius: BorderRadius.circular(15.0)),
                                       labelText: "Plan Name"),
                                   // validator: (value) {
                                   //   return ""
@@ -83,7 +84,7 @@ class PlanFormWidget extends StatelessWidget {
                                       contentPadding:
                                       const EdgeInsets.fromLTRB(15, 8, 8, 0),
                                       border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(23.0)),
+                                          borderRadius: BorderRadius.circular(15.0)),
                                       labelText: "Plan Moto"),
                                 ),
                               ),
@@ -102,7 +103,7 @@ class PlanFormWidget extends StatelessWidget {
                                       contentPadding:
                                       const EdgeInsets.fromLTRB(15, 8, 8, 0),
                                       border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(23.0)),
+                                          borderRadius: BorderRadius.circular(10.0)),
                                       labelText: "Days"),
                                 ),),
                               const SizedBox(width: 20,),
@@ -113,7 +114,7 @@ class PlanFormWidget extends StatelessWidget {
                                       contentPadding:
                                       const EdgeInsets.fromLTRB(15, 8, 8, 0),
                                       border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(23.0)),
+                                          borderRadius: BorderRadius.circular(10.0)),
                                       labelText: "Penalty"),
                                 ),
                               ),

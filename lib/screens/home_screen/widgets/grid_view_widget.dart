@@ -5,6 +5,7 @@ import 'package:hackathon_frontend/screens/plan_Screen/plan_screen.dart';
 class GridViewWidget extends StatelessWidget {
   GridViewWidget({Key? key}) : super(key: key);
   final goalList = ["Fitness", "Sleep" ,"Diet" ,"Yoga"];
+  final goalListDesc = ["Stay fit", "Sleep on time" ,"Prepare yourDiet" ,"Yoga is love"];
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -17,34 +18,62 @@ class GridViewWidget extends StatelessWidget {
             onTap: (){
               Get.to(const PlanScreen());
             },
-            child: Card(
+            child: Material(
+              elevation: 4,
+              child: Card(
 
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  image:  DecorationImage(
-                      image: AssetImage("assets/images/gym${i+1}.jpeg"),
-                      fit:BoxFit.cover
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    // image:  DecorationImage(
+                    //     image: AssetImage("assets/images/gym${i+1}.jpeg"),
+                    //     fit:BoxFit.cover
+                    // ),
                   ),
-                ),
-                height: 250,
-                padding: const EdgeInsetsDirectional.all(5),
-                child: Stack(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Text(
-                          goalList[i],
-                          style: const TextStyle(
-                            fontSize: 22,
-                            color: Colors.tealAccent,
-                            fontWeight: FontWeight.bold,
+                  height: 250,
+                  padding: const EdgeInsetsDirectional.fromSTEB(15, 3, 15, 5),
+                  child: Stack(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Text(
+                            goalList[i],
+                            style: const TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          const SizedBox(
+                            height: 2,
+                          ),
+                          Text(
+                            goalListDesc[i],
+                            style: const TextStyle(
+                              fontSize: 15,
+                              color: Colors.teal,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 7,
+                          ),
+                          Container(
+                            width: 110,
+                            height: 130,
+
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              image:  DecorationImage(
+                                  image: AssetImage("assets/images/gym${i+1}.jpeg"),
+                                  fit:BoxFit.cover
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
