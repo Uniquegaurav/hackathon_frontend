@@ -134,7 +134,7 @@ class PlanFormWidget extends StatelessWidget {
                           child: PlanSelectForm()),
                       Expanded(
                           flex: 3,
-                          child: TextFormField()
+                          child: Material(elevation : 3,child: TextFormField())
                       ),
 
                     ],
@@ -143,8 +143,12 @@ class PlanFormWidget extends StatelessWidget {
                     height: 10,
                   ),
                   Row(
-                    children: const [
-                      PlanSelectForm(),
+                    children:  [
+                      const Expanded(flex: 6,child: PlanSelectForm()),
+                      Expanded(
+                          flex: 3,
+                          child: Material(elevation : 3,child: TextFormField())
+                      ),
                     ],
                   )
                 ]

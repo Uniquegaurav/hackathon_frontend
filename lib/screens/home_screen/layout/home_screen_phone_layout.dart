@@ -53,34 +53,36 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Center(
-            child: Column(
-              children: [
-                Text(
-                  'Greetings, planet!',
-                  style: TextStyle(
-                      fontSize: 35,
-                      foreground: Paint()
-                        ..shader =ui.Gradient.linear(
-                          const Offset(0, 120),
-                          const Offset(30, 20),
-                          <Color>[
-                            Colors.blue,
-                            Colors.red,
-                          ],
-                        )
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Center(
+              child: Column(
+                children: [
+                  Text(
+                    'Greetings, planet!',
+                    style: TextStyle(
+                        fontSize: 35,
+                        foreground: Paint()
+                          ..shader =ui.Gradient.linear(
+                            const Offset(0, 120),
+                            const Offset(30, 20),
+                            <Color>[
+                              Colors.blue,
+                              Colors.red,
+                            ],
+                          )
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                GridViewWidget(),
-              ],
-            ),
-      ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  GridViewWidget(),
+                ],
+              ),
+        ),
     ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(255, 255, 59, 99),
         items: const <BottomNavigationBarItem>[
