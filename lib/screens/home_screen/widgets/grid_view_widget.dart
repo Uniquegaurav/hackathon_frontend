@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:hackathon_frontend/screens/plan_Screen/plan_screen.dart';
 
 class GridViewWidget extends StatelessWidget {
-  const GridViewWidget({Key? key}) : super(key: key);
-
+  GridViewWidget({Key? key}) : super(key: key);
+  final goalList = ["Fitness", "Sleep" ,"Diet" ,"Yoga"];
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -18,40 +18,30 @@ class GridViewWidget extends StatelessWidget {
               Get.to(const PlanScreen());
             },
             child: Card(
+
               child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  image:  DecorationImage(
+                      image: AssetImage("assets/images/gym${i+1}.jpeg"),
+                      fit:BoxFit.cover
+                  ),
+                ),
                 height: 250,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(20)),
                 padding: const EdgeInsetsDirectional.all(5),
                 child: Stack(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        // Expanded(
-                        //   child: Image.network(
-                        //     'https://tech.pelmorex.com/wp-content/uploads/2020/10/flutter.png',
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
-                        const Text(
-                          'Title',
-                          style: TextStyle(
-                            fontSize: 18,
+                        Text(
+                          goalList[i],
+                          style: const TextStyle(
+                            fontSize: 22,
+                            color: Colors.tealAccent,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Row(
-                          children: const [
-                            Text(
-                              'Subtitle',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                              ),
-                            ),
-                          ],
-                        )
                       ],
                     ),
                   ],

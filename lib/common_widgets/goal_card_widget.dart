@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class  extends StatelessWidget {
+class GoalCardWidget extends StatelessWidget {
   const ({Key? key}) : super(key: key);
 
   @override
