@@ -69,8 +69,7 @@ class FormWidget extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
-            child: RaisedButton(
-              padding: EdgeInsets.zero,
+            child: ElevatedButton(
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 60,
