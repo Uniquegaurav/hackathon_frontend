@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:hackathon_frontend/screens/wallet_screen/widgets/wallet_form_widget.dart';
 
@@ -13,6 +12,7 @@ class WalletScreenLayout extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 231, 62, 98),
       ),
       body: const WalletFormWidget(),
+
     );
   }
 }

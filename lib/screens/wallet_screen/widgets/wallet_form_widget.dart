@@ -11,7 +11,8 @@ class WalletFormWidget extends StatelessWidget {
       child: Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(20, 50, 20, 20),
           child: Column(children: [
-            SizedBox(
+
+            Container(
               height: 120,
               width: 120,
               child: Image.asset("assets/images/wallet2.png"),
@@ -22,6 +23,14 @@ class WalletFormWidget extends StatelessWidget {
                   fontSize: 34,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 231, 62, 98)),
+            Container(
+              child: const Text(
+                "Your Balance",
+                style: TextStyle(
+                    fontSize: 34,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 231, 62, 98)),
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -95,6 +104,7 @@ class WalletFormWidget extends StatelessWidget {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           primary: const Color(0xff54BAB9),
+
                         ),
                         child: const Text(
                           'Add',

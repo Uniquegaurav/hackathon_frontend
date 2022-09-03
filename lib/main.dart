@@ -11,4 +11,4 @@ void main() {
     initialRoute: '/home',
     getPages: appRoutes(),
   ));
-}
+
