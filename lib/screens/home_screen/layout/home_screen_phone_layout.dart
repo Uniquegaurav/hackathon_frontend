@@ -26,6 +26,7 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
     setState(() {
       _selectedIndex = index;
     });
+
   }
 
   @override
