@@ -20,7 +20,7 @@ class ProgressScreenMobileLayout extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.only(
-                  left: 40, right: 40, top: 20, bottom: 10),
+                  left: 30, right: 30, top: 20, bottom: 10),
               child: Container(
                       decoration: const BoxDecoration(
                         image: DecorationImage(
@@ -39,8 +39,8 @@ class ProgressScreenMobileLayout extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircularStepProgressIndicator(
-                    totalSteps: 12,
-                    currentStep: 6,
+                    totalSteps: 30,
+                    currentStep: 10,
                     selectedColor: Colors.redAccent,
                     unselectedColor: Colors.grey[200],
                     selectedStepSize: 10.0,
@@ -52,7 +52,7 @@ class ProgressScreenMobileLayout extends StatelessWidget {
                     ),
                     child: const Center(
                       child: Text(
-                        "28",
+                        "10",
                         style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -75,7 +75,7 @@ class ProgressScreenMobileLayout extends StatelessWidget {
               width: 330,
               child: StepProgressIndicator(
                 totalSteps: 30,
-                currentStep: 5,
+                currentStep: 2,
                 size: 8,
                 padding: 0,
                 selectedColor: Colors.yellow,
@@ -105,7 +105,7 @@ class ProgressScreenMobileLayout extends StatelessWidget {
                         "Penalty",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      subtitle: Text("2"),
+                      subtitle: Text("Rs. 15"),
                       leading: Padding(
                         padding: EdgeInsets.only(left: 30),
                         child: Icon(
@@ -121,7 +121,7 @@ class ProgressScreenMobileLayout extends StatelessWidget {
                       "Total",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text("12"),
+                    subtitle: Text("Rs. 500"),
                     leading: Padding(
                       padding: EdgeInsets.only(left: 40),
                       child: Icon(

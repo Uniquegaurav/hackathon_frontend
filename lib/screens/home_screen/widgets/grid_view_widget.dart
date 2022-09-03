@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hackathon_frontend/screens/home_screen/view_model/home_screen_view_model.dart';
 import 'package:hackathon_frontend/screens/plan_Screen/plan_screen.dart';
 
 class GridViewWidget extends StatelessWidget {
   GridViewWidget({Key? key}) : super(key: key);
+  final HomeScreenViewModel homeScreenViewModel  = Get.find();
   final goalList = ["Fitness", "Sleep" ,"Diet" ,"Yoga"];
-  final goalListDesc = ["Stay fit", "Sleep on time" ,"Prepare yourDiet" ,"Yoga is love"];
+  final goalListDesc = ["Show up, train up, never give up", "Sound sleep for a great day" ,"Healthy outside starts inside" ,"Yoga wellness of mind and body"];
   @override
   Widget build(BuildContext context) {
     return Center(

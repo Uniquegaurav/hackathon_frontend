@@ -7,7 +7,7 @@ class ProgressGridViewWidget extends StatefulWidget {
 }
 
 class _ProgressGridViewWidgetState extends State<ProgressGridViewWidget> {
-  final progressList = [1,1,1,1,0,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
+  final progressList = [1,1,1,1,0,0,1,1,1,0,1,1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -19,7 +19,7 @@ class _ProgressGridViewWidgetState extends State<ProgressGridViewWidget> {
           return Card(
             color: const Color(0xff54BAB9),
             child: Center(
-              child: progressList[index] == 0 ? const Icon(Icons.close,color: Colors.yellow,) :
+              child: progressList[index] == 0 ? const Icon(Icons.close,color: Colors.red,) :
               (progressList[index] == 1 ?
                   const Icon(Icons.done,color: Colors.yellow,) :
                 Text("${index+1}",style: const TextStyle(color: Colors.white),)),

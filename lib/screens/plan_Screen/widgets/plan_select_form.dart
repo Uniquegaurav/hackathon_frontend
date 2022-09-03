@@ -10,14 +10,12 @@ class PlanSelectForm extends StatefulWidget {
 
 class _PlanSelectFormState extends State<PlanSelectForm> {
   final List<String> items = [
-    'Item1',
-    'Item2',
-    'Item3',
-    'Item4',
-    'Item5',
-    'Item6',
-    'Item7',
-    'Item8',
+    'Squats',
+    'Push ups',
+    'Dumbbell rows',
+    'Side planks',
+    'Bench Press',
+    'Pull up',
   ];
   String? selectedValue;
   @override
@@ -40,7 +38,7 @@ class _PlanSelectFormState extends State<PlanSelectForm> {
                     ),
                     Expanded(
                       child: Text(
-                        'Select Item',
+                        'Select work',
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,

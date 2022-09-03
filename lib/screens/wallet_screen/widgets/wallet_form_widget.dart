@@ -16,13 +16,6 @@ class WalletFormWidget extends StatelessWidget {
               width: 120,
               child: Image.asset("assets/images/wallet2.png"),
             ),
-            const Text(
-              "Your Balance",
-              style: TextStyle(
-                  fontSize: 34,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 231, 62, 98)),
-            ),
             Container(
               child: const Text(
                 "Your Balance",
