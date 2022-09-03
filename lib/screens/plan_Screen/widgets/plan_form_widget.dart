@@ -155,7 +155,7 @@ class PlanFormWidget extends StatelessWidget {
                       Expanded(
                           flex: 2,
                           child:
-                              Material(elevation: 3, child: TextFormField())),
+                              Material(elevation: 3, child: Center(child: TextFormField()))),
                       const SizedBox(
                         width: 70,
                       ),
@@ -175,7 +175,7 @@ class PlanFormWidget extends StatelessWidget {
                       Expanded(
                           flex: 2,
                           child:
-                              Material(elevation: 3, child: TextFormField())),
+                              Material(elevation: 3, child: Center(child: TextFormField()))),
                       const SizedBox(
                         width: 70,
                       ),

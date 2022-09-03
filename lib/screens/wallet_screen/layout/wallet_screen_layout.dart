@@ -8,6 +8,7 @@ class WalletScreenLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text("Wallet"),
         backgroundColor: const Color.fromARGB(255, 231, 62, 98),
       ),
