@@ -7,7 +7,6 @@ class WalletFormWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
         child: Form(
-      // key: widget.formKey,
       child: Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(20, 50, 20, 20),
           child: Column(children: [
@@ -23,6 +22,7 @@ class WalletFormWidget extends StatelessWidget {
                   fontSize: 34,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 231, 62, 98)),
+            ),
             Container(
               child: const Text(
                 "Your Balance",
