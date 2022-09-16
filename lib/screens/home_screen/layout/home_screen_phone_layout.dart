@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hackathon_frontend/app_theme/app_theme_data.dart';
 import 'package:hackathon_frontend/screens/home_screen/home_screen.dart';
 import 'package:hackathon_frontend/screens/login_screen/widgets/login_alert_widget.dart';
 import 'package:hackathon_frontend/controllers/pop_up_controller.dart';
@@ -22,6 +23,7 @@ class HomeScreenPhoneLayout extends StatefulWidget {
 class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
   final HomeScreenViewModel homeScreenViewModel =
   Get.put(HomeScreenViewModel());
+
   @override
   void initState() {
     homeScreenViewModel.getGoalsData();
@@ -32,7 +34,7 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
-    if(_selectedIndex!=index) {
+    if (_selectedIndex != index) {
       switch (index) {
         case 1:
           Get.to(const ProgressScreen());
@@ -45,7 +47,6 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
     setState(() {
       _selectedIndex = index;
     });
-
   }
 
   @override
@@ -53,12 +54,17 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Fit & Fine'),
-        backgroundColor: const Color.fromARGB(255, 231, 62, 98),
+        title:  Text('Fit & Fine',
+          style: TextStyle(
+            color: ThemeColor.textColor,
+          ),
+        ),
+        backgroundColor: ThemeColor.appbarColor,
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: IconButton(
+
               onPressed: () {
                 showDialog(
                   context: context,
@@ -67,7 +73,9 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
                   },
                 );
               },
-              icon: const Icon(Icons.person),
+              icon: Icon(Icons.person,
+                color: ThemeColor.iconColor,
+              ),
               iconSize: 30.0,
             ),
           ),
@@ -77,53 +85,48 @@ class _HomeScreenPhoneLayoutState extends State<HomeScreenPhoneLayout> {
         child: Padding(
           padding: const EdgeInsetsDirectional.only(
               start: 10, top: 20, end: 10, bottom: 5),
-          child: Center(
-            child: Column(
-              children: [
-                Text(
-                  'HEALTH AND LIFESTYLE',
-                  style: TextStyle(
-                      fontSize: 25,
-                      foreground: Paint()
-                        ..shader = ui.Gradient.linear(
-                          const Offset(0, 120),
-                          const Offset(30, 20),
-                          <Color>[
-                            Colors.blue,
-                            Colors.red,
-                          ],
-                        )
+          child: SingleChildScrollView(
+            child: Center(
+              child: Column(
+                children: [
+                  Text(
+                    'HEALTH AND LIFESTYLE',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: ThemeColor.titleColor,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                GridViewWidget(),
-              ],
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  GridViewWidget(),
+                ],
+              ),
             ),
           ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 255, 59, 99),
-        items: const <BottomNavigationBarItem>[
+        backgroundColor: ThemeColor.navBarColor,
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.white,),
+            icon: Icon(Icons.home, color : ThemeColor.iconColor,),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month, color: Colors.white),
+            icon: Icon(Icons.calendar_month, color : ThemeColor.iconColor,),
             label: 'Progress',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-                Icons.account_balance_wallet_rounded, color: Colors.white),
+              Icons.account_balance_wallet_rounded,
+                color : ThemeColor.iconColor),
             label: 'Wallet',
           ),
         ],
         currentIndex: _selectedIndex,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.amber[800],
+        unselectedItemColor: ThemeColor.subTextColor,
+        selectedItemColor: ThemeColor.textColor,
         onTap: _onItemTapped,
       ),
     );
